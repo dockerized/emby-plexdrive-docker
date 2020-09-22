@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  plexdrive:
+    container_name: plexdrive
+    image: xiocode/emby-plexdrive-docker:latest
+    restart: always
+    volumes:
+      - ./plexdrive/config:/plexdrive/config
+      - ./plexdrive/cache:/plexdrive/cache
+    ports:
+      - 8096:8096      
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Asia/Shanghai
+      - PLEXDRIVE_OPTS=-v 3 --drive-id=0AHJmyWYLcZ-_Uk9PVA --refresh-interval=1m --max-chunks=50 --chunk-size=10M --chunk-load-ahead=5 --chunk-check-threads=3 --chunk-load-threads=5

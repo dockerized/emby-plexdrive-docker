@@ -5,8 +5,7 @@ if [ -e /.firstPlexdriveRunComplete ]; then
   exit 0
 fi
 
-home="$(echo ~abc)"
-configSubDir="${home}/${PLEXDRIVE_CONFIG_DIR}"
+configSubDir="${PLEXDRIVE_CONFIG_DIR}"
 
 # Update ownership of dirs we need to write
 if [ "${CHANGE_PLEXDRIVE_CONFIG_DIR_OWNERSHIP,,}" = "true" ]; then
