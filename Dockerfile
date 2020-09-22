@@ -1,14 +1,13 @@
-FROM linuxserver/emby:latest
+FROM linuxserver/emby:4.5.0.50-ls56
 
 LABEL maintainer="https://github.com/rapejim"
 
 ENTRYPOINT ["/init"]
 
-ENV HOME="/config" \
-    PLEXDRIVE_CONFIG_DIR=".plexdrive" \
+ENV PLEXDRIVE_CONFIG_DIR="/plexdrive" \
     CHANGE_PLEXDRIVE_CONFIG_DIR_OWNERSHIP="true" \
-    PLEXDRIVE_MOUNT_POINT="/home/Emby" \
-    EXTRA_PARAMS=""
+    PLEXDRIVE_MOUNT_POINT="/home/media" \
+    PLEXDRIVE_OPTS=""
 
 COPY root/ /
 
