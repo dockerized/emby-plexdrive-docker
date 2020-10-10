@@ -1,4 +1,4 @@
-FROM linuxserver/emby:4.5.2.0-ls58
+FROM linuxserver/emby:latest
 
 LABEL maintainer="https://github.com/rapejim"
 
