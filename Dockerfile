@@ -1,6 +1,6 @@
 FROM linuxserver/emby:latest
 
-LABEL maintainer="https://github.com/rapejim"
+LABEL maintainer="https://github.com/xiocode"
 
 ENTRYPOINT ["/init"]
 
